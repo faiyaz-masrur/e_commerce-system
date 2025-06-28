@@ -51,3 +51,65 @@ These are the features we added, and by this, any customer can easily reach the 
 
 
 ## Let's run the project
+1. Make sure you have installed:
+   
+   - PHP
+   - Composer
+   - MySQL
+   - Laravel CLI
+     
+2. Open a terminal or command prompt on the _xampp htdocs folder in c drive_ and run:
+   
+   ```
+   https://github.com/faiyaz-masrur/e_commerce-system.git
+   cd e_commerce-system
+   ```
+
+3. Make sure you have Composer installed:
+
+   ```
+   composer install
+   ```
+   
+4. Create the _.env_ file by copying the example environment file:
+
+   ```
+   copy .env.example .env
+   ```
+
+5. Generate Application Key:
+
+   ```
+   php artisan key:generate
+   ```
+
+6. Edit *.env* to set your database info (MySQL preferred):
+
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=e_commerce
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+   
+   Then create the database *e_commerce* manually using **phpMyAdmin** or **MySQL CLI**:
+
+   ```
+   CREATE DATABASE e_commerce;
+   ```
+
+8. Then run Migrations:
+
+   ```
+   php artisan migrate
+   ```
+
+9. Finally, run the project:
+
+   ```
+   php artisan serve
+   ```
+
+   This will run the project at [http://127.0.0.1:8000](http://127.0.0.1:8000).
